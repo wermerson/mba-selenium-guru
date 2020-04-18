@@ -11,12 +11,13 @@ public class GoogleSearchTest{
  
     @Test
     public void google0() throws Exception {
-    	new PageGoogle().openPage(PageGoogle.class, "http://www.google.com").buscarNoGoogle("selenium");
-    	new PageGoogle().buscarNoGoogle("oi");
+    	new PageGoogle()
+    	.openPage(PageGoogle.class, "http://www.google.com")
+    	.buscarNoGoogle("recursividade");
+    	
     }
     @Test
     public void google1() throws Exception {
     	new PageGoogle().openPage(PageGoogle.class, "http://www.google.com").buscarNoGoogle("selenium");
-    	new PageGoogle().buscarNoGoogle("oi");
     }
 }

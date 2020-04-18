@@ -7,3 +7,13 @@
 .classpath
 
 allure-results/
+
+resultadoTest/Evidencias/loginSucesso/
+
+test-output/junitreports/
+
+test-output/old/Default suite/
+
+test-output/old/Suite/
+
+test-output/
