@@ -117,6 +117,19 @@ public abstract class CorePage<T> {
 			fail("Tempo excedido para aguardar elemento: "+element);
 		}
 	}
+	public void aguardarAlertVisivel(){
+		System.out.println("aguardarAlertVisivel()...");
+		try {
+			WebDriverWait driverWait = new WebDriverWait(this.driver, LOAD_TIMEOUT);
+			if(driverWait.until(ExpectedConditions.alertIsPresent())==null){
+				System.out.println("No alert");
+			}else{
+				System.out.println("Alert present");
+			}
+		} catch (Exception e) {
+			fail("Tempo excedido para aguardar Alert.");
+		}
+	}
 	public void aguardarListElementoVisivel(List<WebElement> elements){
 		try {
 			WebDriverWait driverWait = new WebDriverWait(this.driver, LOAD_TIMEOUT);

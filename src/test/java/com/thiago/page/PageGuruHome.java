@@ -13,6 +13,7 @@ public class PageGuruHome extends CorePage<PageGuruHome>{
 		this.driver = TLDriverFactory.getDriver();
 		PageFactory.initElements(this.driver, this);
 	}
+
 	@FindBy(id = "email")
 	private WebElement inputEmail;
 	
@@ -21,9 +22,7 @@ public class PageGuruHome extends CorePage<PageGuruHome>{
 	
 	@FindBy(id = "SubmitLogin")
 	private WebElement bntLogin;
-	
-	
-	
+
 	public PageGuruSucess acessarLoginGuru(String email, String senha) {
 		preencherCampo(inputEmail, email);
 		preencherCampo(inputPasswd, senha);
